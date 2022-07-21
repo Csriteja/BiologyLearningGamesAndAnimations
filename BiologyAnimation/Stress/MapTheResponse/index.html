@@ -1,0 +1,75 @@
+<script src="js/iframeResizer.min.js"></script>
+<script src="js/iframeResizer.contentWindow.min.js"></script>
+
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-1.5.js"
+></script>
+<script
+  type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.js"
+></script>
+
+<script type="text/javascript" src="js/sorting.js"></script>
+<link rel="stylesheet" href="css/style.css" />
+<header id="title_subtitle">
+  <h1 style="text-align: center">Map the Response</h1>
+  <h1>
+    Ouch! You stepped on a sharp rock. Map the nerve pathway that caused you to lift
+    your foot.
+  </h1>
+</header>
+<ul id="original_items">
+  <li id="fourth">
+    <img
+      src="img/Picture4.png"
+      alt="Multipolar motor neuron"
+      height="280"
+      width="140"
+    />
+  </li>
+  <li id="third">
+    <img
+      src="img/Picture3.png"
+      alt="Interneuron"
+      height="280"
+      width="140"
+    />
+  </li>
+  <li id="fifth">
+    <img
+      src="img/Picture5.png"
+      alt="Skeletal muscle"
+      height="140"
+      width="280"
+    />
+  </li>
+  <li id="second">
+    <img
+      src="img/Picture2.png"
+      alt="Spinal cord"
+      height="280"
+      width="140"
+    />
+  </li>
+  <li id="first">
+    <img
+      src="img/Picture1.png"
+      alt="Unipolar Sensory neuron"
+      height="280"
+      width="140"
+    />
+  </li>
+</ul>
+
+<div id="checked_order" style="text-align: center">
+  <b style="color: #5390d9">Move the labeled images into the correct order</b>
+</div>
+
+<ul id="cloned_items"></ul>
+<script type="text/javascript">
+var ul = document.getElementById('original_items');
+for (var i = ul.children.length; i >= 0; i--) {
+    ul.appendChild(ul.children[Math.random() * i | 0]);
+}
+</script>
