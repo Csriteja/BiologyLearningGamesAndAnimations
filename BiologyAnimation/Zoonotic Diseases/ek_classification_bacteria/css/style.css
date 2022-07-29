@@ -1,0 +1,47 @@
+aside {
+  position: absolute;
+  left: 200;
+  top: 100;
+  /* set these so Chrome doesn't return 'auto' from getComputedStyle */
+  width: 250px;
+  height:250px;
+  float:center;
+  background: rgba(255, 0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+}
+.images {
+	pointer-events: none;
+	width: 250px;
+  height:250px;
+}
+.second {
+	left: 500px;
+	top: 100px;
+}
+
+.third {
+	left: 800px;
+	top: 100px;
+}
+.fourth {
+	left: 50px;
+	top: 400px;
+}
+.fifth {
+	left: 350px;
+	top: 400px;
+}
+.sixth {
+	left: 650px;
+	top: 400px;
+}
+.seventh {
+	left: 950px;
+	top: 400px;
+}
+
+body, html {
+	min-height: 100vh;
+}

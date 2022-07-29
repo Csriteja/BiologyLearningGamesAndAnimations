@@ -1,0 +1,49 @@
+<script src="js/iframeResizer.min.js"></script>
+<script src="js/iframeResizer.contentWindow.min.js"></script>
+
+<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-1.5.js"
+></script>
+<script
+  type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/jquery-ui.js"
+></script>
+<link rel="stylesheet" href="css/style.css" />
+<header>
+  <h1 style="text-align: center">Quick, organize these living things into groups:</h1>
+</header>
+<aside draggable="true" class="dragme" data-item="0"><img class='images' src='img/Picture1.png'/></aside>
+<aside draggable="true" class="dragme second" data-item="1"><img class='images' src='img/Picture2.png'/></aside>
+<aside draggable="true" class="dragme third" data-item="2"><img class='images' src='img/Picture3.png'/></aside>
+<aside draggable="true" class="dragme fourth" data-item="3"><img class='images' src='img/Picture4.png'/></aside>
+<aside draggable="true" class="dragme fifth" data-item="4"><img class='images' src='img/Picture5.png'/></aside>
+<aside draggable="true" class="dragme sixth" data-item="5"><img class='images' src='img/Picture6.png'/></aside>
+<aside draggable="true" class="dragme seventh" data-item="6"><img class='images' src='img/Picture7.png'/></aside>
+<script>
+function drag_start(event) {
+	var style = window.getComputedStyle(event.target, null);
+	event.dataTransfer.setData("text/plain", (parseInt(style.getPropertyValue("left"), 10) - event.clientX) + ',' + (parseInt(style.getPropertyValue("top"), 10) - event.clientY) + ',' + event.target.getAttribute('data-item'));
+}
+
+function drag_over(event) {
+	event.preventDefault();
+	return false;
+}
+
+function drop(event) {
+	var offset = event.dataTransfer.getData("text/plain").split(',');
+	var dm = document.getElementsByClassName('dragme');
+	dm[parseInt(offset[2])].style.left = (event.clientX + parseInt(offset[0], 10)) + 'px';
+	dm[parseInt(offset[2])].style.top = (event.clientY + parseInt(offset[1], 10)) + 'px';
+	event.preventDefault();
+	return false;
+}
+
+var dm = document.getElementsByClassName('dragme');
+for (var i = 0; i < dm.length; i++) {
+	dm[i].addEventListener('dragstart', drag_start, false);
+	document.body.addEventListener('dragover', drag_over, false);
+	document.body.addEventListener('drop', drop, false);
+}
+</script>

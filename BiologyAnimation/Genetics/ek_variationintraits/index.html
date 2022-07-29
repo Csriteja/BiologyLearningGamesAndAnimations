@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drag and Drop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <!-- jquery scripts -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <!-- iframe resizer -->
+    <script type="text/javascript" src="js/iframeResizer.min.js"></script>
+    <script type="text/javascript" src="js/iframeResizer.contentWindow.min.js"></script>
+
+    <!-- Include touch punch -->
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+
+    <!-- drag and drop animation script -->
+    <script type="text/javascript" src="js/slide68.js"></script>
+    <script type="text/javascript" src="js/parameters.js"></script>
+    <script type="text/javascript">
+          var timer1 = setInterval(function(){
+            var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+            if( $('.question-container').height() > 0 ){
+              if(width>1050)
+              {
+                $('#master-container').css( 'height' , 'auto' );
+              }
+            clearInterval(timer1);
+          }
+        }, 100);
+    </script>
+	<header>
+	  <h1 style="text-align: center">Check for understanding</h1>
+  <h2 style="text-align: center">
+    Separate the factors in the word bank as genetic or environmental sources of variation
+  </h2>
+  </header>
+    <div id="master-container">
+      <div class="question-container" >
+        <div id = "#9" class = "drpBox" style = "top: 1%;left: 10%;width: 45%; height: 9%; font-size: 150% ">Genetics</div>
+        <div id = "#10" class = "drpBox" style = "top: 1%;left: 55%;width: 45%; height: 9%; font-size: 150% ">Environment</div>
+        <div id = "#1" class = "dropBox" style = "top: 10%;left: 10%;width: 45%; height: 9%;background-color: WhiteSmoke;"></div>
+        <div id = "#2" class = "dropBox" style = "top: 19%;left: 10%;width: 45%; height: 9%;background-color: LightGray;"></div>
+        <div id = "#3" class = "dropBox" style = "top: 28%;left: 10%;width: 45%; height: 9%;background-color: WhiteSmoke;"></div>
+        <div id = "#4" class = "dropBox" style = "top: 37%;left: 10%;width: 45%; height: 9%;background-color: LightGray;"></div>
+        <div id = "#5" class = "dropBox" style = "top: 10%;left: 55%;width: 45%; height: 9%;background-color: WhiteSmoke;"></div>
+        <div id = "#6" class = "dropBox" style = "top: 19%;left: 55%;width:45%; height: 9%;background-color: LightGray;"></div>
+        <div id = "#7" class = "dropBox" style = "top: 28%;left: 55%;width: 45%; height: 9%;background-color: WhiteSmoke;"></div>
+        <div id = "#8" class = "dropBox" style = "top: 37%;left: 55%;width: 45%; height: 9%;background-color: LightGray;"></div>
+      </div>
+      <div class= "answer-container">
+        <div id="word-bank" class="word-bank">
+        </div>
+        <div class="button-container">
+          <button id="submit" >Submit</button>
+        </div>
+        
+       
+        
+      <!--</div -->
+  	  <!--<div class="hint"> -->
+        <div id="result"></div>
+        </div>
+    </div>
+  </body>
+</html>
