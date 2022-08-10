@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript">
+    var timer1 = setInterval(function () {
+      var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+      if ($('.question-container').height() > 0) {
+        if (width > 1050) {
+          $('#master-container').css('height', 'auto');
+        }
+        clearInterval(timer1);
+      }
+    }, 100);
+  </script>
+</head>
+
+<body>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <script type="text/javascript" src="js/iframeResizer.contentWindow.min.js"></script>
+
+  <script src="js/jquery.ui.touch-punch.js"></script>
+  <script src="js/jquery.ui.touch-punch.min.js"></script>
+
+  <script type="text/javascript" src="js/slide_producer_knowledge_check.js"></script>
+  <script type="text/javascript" src="js/contents.js"></script>
+		<center>
+          <span style="font-size:2.5vw; font-weight:bold">Symbiotic Relationship Review<br></span><span style="font-size:1.5vw; ">Place the emoji faces in the correct spaces on the chart. Each face may be used more than once.</span>
+        </center>
+  <div id="master-container">
+    <div class="question-container">
+
+      <div class="question" style="top:18.2%; left:2.5%; width:20%; height:20%" id="#1"></div>
+      <div class="question" style="top:18.2%; left:24.7%; width:20%; height:20%" id="#2"></div>
+      <div class="question" style="top:18.2%; left:47.7%; width:20%; height:20%" id="#3"></div>
+      <div class="question" style="top:51.2%; left:2.5%; width:20%; height:20%" id="#4"></div>
+      <div class="question" style="top:51.2%; left:24.7%; width:20%; height:20%" id="#5"></div>
+	  <div class="question" style="top:51.2%; left:47.7%; width:20%; height:20%" id="#6"></div>
+
+    </div>
+    <div class="answer-container">
+      <div class="word-bank">
+        <center>
+          <span style="font-size:2.5vw; font-weight:bold">Answers<br></span><span style="font-size:1.5vw; ">(Drag to
+            drop into the boxes)</span>
+        </center>
+
+
+        <img class="answer" id="a1" src="img/Benefits1.png" draggable="true">
+
+
+        <img class="answer" id="a2" src="img/Benefits2.png" draggable="true">
+
+
+        <img class="answer" id="a3" src="img/Benefits3.png" draggable="true">
+		<img class="answer" id="a4" src="img/Benefits4.png" draggable="true">
+
+        <img class="answer" id="a5" src="img/Harmed1.png" draggable="true">
+
+        <img class="answer" id="a6" src="img/Harmed2.png" draggable="true">
+		<img class="answer" id="a7" src="img/Harmed3.png" draggable="true">
+		<img class="answer" id="a8" src="img/Harmed4.png" draggable="true">
+		<img class="answer" id="a9" src="img/NotImpacted1.png" draggable="true">
+		<img class="answer" id="a10" src="img/NotImpacted2.png" draggable="true">
+		<img class="answer" id="a11" src="img/NotImpacted3.png" draggable="true">
+		<img class="answer" id="a12" src="img/NotImpacted4.png" draggable="true">
+
+
+      </div>
+      <div class="submit-container">
+        <button id="submit">Submit</button>
+      </div>
+    </div>
+    <div class="hint">
+      <div class="hint-content">
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
